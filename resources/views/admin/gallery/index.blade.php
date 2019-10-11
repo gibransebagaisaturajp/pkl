@@ -1,14 +1,14 @@
 @extends('adminbackend')
 
-@section('css')
-        <link rel="stylesheet" href="{{asset('backend/assets/vendor/datatables.net-bs4/css/dataTables.bootstrap4.css')}}">
+{{-- @section('css')
+        <link rel="stylesheet" href="{{asset('DataTable/dt/vendor/datatables.net-bs4/css/dataTables.bootstrap4.css')}}">
 @endsection
 
 @section('js')
-        <script src="{{asset('assets/backend/assets/vendor/datatables.net/js/jquery.dataTables.js')}}"></script>
-        <script src="{{asset('assets/backend/assets/vendor/datatables.net-bs4/js/dataTables.bootstrap4.js')}}"></script>
-        <script src="{{asset('assets/backend/assets/js/components/datatables-init.js')}}"></script>
-@endsection
+        <script src="{{asset('DataTable/dt/vendor/datatables.net/js/jquery.dataTables.js')}}"></script>
+        <script src="{{asset('DataTable/dt/vendor/datatables.net-bs4/js/dataTables.bootstrap4.js')}}"></script>
+        <script src="{{asset('DataTable/dt/js/components/datatables-init.js')}}"></script>
+@endsection --}}
 
 @section('content')
 <section class="page-content container-fluid">
@@ -22,13 +22,13 @@
                         </a>
                 </center>
                 <div class="card-body">
-                    <table id="bs4-table" class="table table-striped table-bordered">
+                    <table id="datatable" class="table table-striped table-bordered">
                         <thead>
                             <tr>
                                 <th>Nama Barang</th>
                                 <th>Slug</th>
                                 <th>Kategori</th>
-                                <th>Pembuat</th>
+                                {{-- <th>Pembuat</th> --}}
                                 <th>Foto</th>
                                 <th style="text-align: center;">Aksi</th>
                             </tr>
@@ -39,7 +39,7 @@
                                 <td>{{$data->judul}}</td>
                                 <td>{{$data->slug}}</td>
                                 <td>{{$data->kategori->nama}}</td>
-                                <td>{{$data->user->name}}</td>
+                                {{-- <td>{{$data->user->name}}</td> --}}
                                 <td><img src="{{asset('assets/img/gallery/' .$data->foto. '')}}"
                                     style="width:250px; height:250px;" alt="Foto"></td>
 

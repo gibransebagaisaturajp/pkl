@@ -12,9 +12,8 @@
                     </h5>
                     <div class="card-body">
                     <img src="{{ asset('assets/img/gallery/'.$gallery->foto.'')}}"
-                    style="width:300px;" class="float-left rounded m-r-30 m-b-30">
+                    style="width:250px;" class="float-left rounded m-r-30 m-b-30">
                     <p>{!! $gallery->konten !!}</p>
-                    <br>
                     <p>
                         Kategori :
                         <button class="btn btn-sm btn-rounded btn-info">
@@ -28,6 +27,9 @@
                         </button>
                         @endforeach
                     </p>
+                    <br>
+                    <br>
+                    <br>
                     <p>
                         Tanggal : {{ $gallery->created_at->format('d M Y, H:i') }} WIB
                     </p>

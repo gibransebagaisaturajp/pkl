@@ -1,6 +1,6 @@
 @extends('adminbackend')
 
-@section('css')
+{{-- @section('css')
         <link rel="stylesheet" href="{{asset('assets/backend/assets/vendor/datatables.net-bs4/css/dataTables.bootstrap4.css')}}">
 @endsection
 
@@ -8,7 +8,7 @@
         <script src="{{asset('assets/backend/assets/vendor/datatables.net/js/jquery.dataTables.js')}}"></script>
         <script src="{{asset('assets/backend/assets/vendor/datatables.net-bs4/js/dataTables.bootstrap4.js')}}"></script>
         <script src="{{asset('assets/backend/assets/js/components/datatables-init.js')}}"></script>
-@endsection
+@endsection --}}
 
 @section('content')
 <section class="page-content container-fluid">
@@ -22,7 +22,7 @@
                         </a>
                 </center>
                 <div class="card-body">
-                    <table id="bs4-table" class="table table-striped table-bordered">
+                    <table id="datatable" class="table table-striped table-bordered">
                         <thead>
                             <tr>
                                 <th>nama</th>

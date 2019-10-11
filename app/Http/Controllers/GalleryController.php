@@ -9,6 +9,7 @@ use App\Gallery;
 use Session;
 use Auth;
 use File;
+use DB;
 class GalleryController extends Controller
 {
     /**
@@ -18,6 +19,9 @@ class GalleryController extends Controller
      */
       public function index()
     {
+        // $galllery = DB::table('gallleries')->select('*');
+        // return datatables()->of($galllery)
+        //     ->make(true);
         $gallery = Gallery::orderBy('created_at', 'desc')->get();
         return view('admin.gallery.index', compact('gallery'));
     }
@@ -41,13 +45,13 @@ class GalleryController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'judul' => 'required|unique:galleries',
-            'konten' => 'required',
-            'foto' => 'required|min:jpeg,jpg,png,gif|max:2048',
-            'nama' => 'required',
-            'tag' => 'required'
-        ]);
+        // $this->validate($request, [
+        //     'judul' => 'required|unique:galleries',
+        //     'konten' => 'required',
+        //     'foto' => 'required|min:jpeg,jpg,png,gif|max:2048',
+        //     'nama' => 'required',
+        //     'tag' => 'required'
+        // ]);
         $gallery = new Gallery();
         $gallery->judul = $request->judul;
         $gallery->slug = Str::slug($request->judul, '-');

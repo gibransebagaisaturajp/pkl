@@ -15,6 +15,8 @@
     <link href="{{asset('assets/backend/assets/libs/chartist/dist/chartist.min.css')}}" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="{{asset('assets/backend/dist/css/style.min.css')}}" rel="stylesheet"> 
+    <link rel="stylesheet" href="{{ asset('DataTables/dt/css/dataTables.bootstrap4.min.css')}}">
+    <link rel="stylesheet" href="{{asset('DataTables/datatables.min.css')}}">
     @yield('css')
 </head>
 
@@ -68,8 +70,16 @@
     <script src="{{asset('assets/backend/assets/libs/chartist/dist/chartist.min.js')}}"></script>
     <script src="{{asset('assets/backend/assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js')}}"></script>
     <script src="{{asset('assets/backend/dist/js/pages/dashboards/dashboard1.js')}}"></script>
+    <script src="{{asset('DataTables/dt/js/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('DataTables/datatables.min.js')}}"></script>
+    <script>
+    $(document).ready(function() {
+    $('#datatable').DataTable();
+    });
+    </script>
     <script src="/ckeditor/ckeditor.js"></script>
     @yield('js')
+    
 </body>
 
 </html>

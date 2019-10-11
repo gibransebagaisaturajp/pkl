@@ -1,4 +1,4 @@
-{{-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -82,20 +82,23 @@
                         </div>
                     @endif
                     <center>
-                    <h1>Selamat Datang</h1> --}}
+                    <h1>Selamat Datang</h1>
                     {{-- @gueat
 
                     @role('admin')
                     }}
                     @endguest
                     @endrole --}}
-                    {{-- </center>
+                     </center>
                 </div>
 
         </div>
     </body>
-</html> --}}
-<!DOCTYPE html>
+</html>
+
+
+
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>Login Backend</title>
@@ -190,4 +193,4 @@
 	<script src="{{asset('assetss/js/main.js')}}"></script>
 
 </body>
-</html>
+</html> --}}

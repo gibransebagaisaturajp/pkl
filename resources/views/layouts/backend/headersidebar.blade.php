@@ -15,7 +15,7 @@
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text -->
-                        <span class="logo-text">
+                        <span class="">
                              <!-- dark Logo text -->
                              <img src="{{asset('assets/backend/assets/images/logo-text.png')}}" alt="homepage" class="dark-logo" />
                              <!-- Light Logo text -->    
