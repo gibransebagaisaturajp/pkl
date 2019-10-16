@@ -45,13 +45,12 @@ class GalleryController extends Controller
      */
     public function store(Request $request)
     {
-        // $this->validate($request, [
-        //     'judul' => 'required|unique:galleries',
-        //     'konten' => 'required',
-        //     'foto' => 'required|min:jpeg,jpg,png,gif|max:2048',
-        //     'nama' => 'required',
-        //     'tag' => 'required'
-        // ]);
+         $this->validate($request, [
+              'konten' => 'required',
+              'foto' => 'required|image|mimes:jpg,png,jpeg,gif,svg',
+              'nama' => 'required',
+              'tag' => 'required'
+         ]);
         $gallery = new Gallery();
         $gallery->judul = $request->judul;
         $gallery->slug = Str::slug($request->judul, '-');

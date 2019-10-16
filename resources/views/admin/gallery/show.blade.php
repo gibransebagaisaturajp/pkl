@@ -30,9 +30,13 @@
                     <br>
                     <br>
                     <br>
+                    <br>
+                    <br>
+                    <br>
                     <p>
                         Tanggal : {{ $gallery->created_at->format('d M Y, H:i') }} WIB
                     </p>
+                    <br>
                     <p>
                         <a href="{{ url('gallery') }}"
                         class="btn btn-outline btn-block btn-rounded btn-info">

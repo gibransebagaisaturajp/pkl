@@ -164,6 +164,7 @@ return [
         Laratrust\LaratrustServiceProvider::class,
         Yajra\DataTables\DataTablesServiceProvider::class,
 
+
         /*
          * Package Service Providers...
          */

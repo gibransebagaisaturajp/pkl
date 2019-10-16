@@ -67,7 +67,7 @@
                             </button>
                         </div>
                         <div class="form-group">
-                            <a href="{{ url('admin/gallery') }}" class="btn btn-outline-info">Kembali</a>
+                            <a href="{{ url('gallery') }}" class="btn btn-outline-info">Kembali</a>
                         </div>
                     </form>
                     </div>
