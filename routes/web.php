@@ -22,6 +22,7 @@ Route::group(['prefix' => 'backend', 'middleware' => ['auth', 'role:Admin']], fu
        Route::resource('gallery', 'GalleryController'); 
        Route::resource('tag', 'TagController');
        Route::resource('kategori', 'KategoriController');
+       Route::get('/home', 'HomeController@index')->name('home');
 });
  Route::resource('gallery', 'GalleryController');
  Route::resource('tag', 'TagController');
@@ -30,3 +31,23 @@ Route::group(['prefix' => 'backend', 'middleware' => ['auth', 'role:Admin']], fu
 
 Auth::routes(['register' => false]);
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/singleblog', function () {
+    return view('frontend.singleblog');
+});
+
+Route::get('/index', function () {
+    return view('frontend.index');
+});
+
+Route::get('/contact', function () {
+    return view('frontend.contact');
+});
+
+Route::get('/archive', function () {
+    return view('frontend.archive');
+});
+
+Route::get('/category', function () {
+    return view('frontend.category');
+});

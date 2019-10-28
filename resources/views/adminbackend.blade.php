@@ -15,7 +15,7 @@
     <link href="{{asset('assets/backend/assets/libs/chartist/dist/chartist.min.css')}}" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="{{asset('assets/backend/dist/css/style.min.css')}}" rel="stylesheet"> 
-    <link rel="stylesheet" href="{{ asset('DataTables/dt/css/dataTables.bootstrap4.min.css')}}">
+    <link rel="stylesheet" href="{{asset('DataTables/dt/css/dataTables.bootstrap4.min.css')}}">
     <link rel="stylesheet" href="{{asset('DataTables/datatables.min.css')}}">
     @yield('css')
 </head>
