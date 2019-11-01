@@ -102,17 +102,17 @@
                             <!-- End User Profile-->
                         </li>
                     {{-- @role('Admin') --}}
-                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/gallery" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Gallery</span></a>
+                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/gallery" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Gallery</span></a>
                     </li>
                     {{-- @endrole --}}
 
                     {{-- @role('Admin') --}}
-                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/tag" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Tag</span></a>
+                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/tag" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Tag</span></a>
                     </li>
                     {{-- @endrole --}}
 
                     {{-- @role('Admin') --}}
-                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/kategori" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Kategori</span></a>
+                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/kategori" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Kategori</span></a>
                     </li>
                     {{-- @endrole --}}
                     {{-- <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/kasir" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu"></span></a></li>

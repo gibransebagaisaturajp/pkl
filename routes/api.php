@@ -16,3 +16,9 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::group(['middleware' => 'cors'], function () {
+    Route::resource('/kategori', 'KategoriController');
+    Route::resource('/tag', 'TagController');
+    Route::resource('/gallery', 'GalleryController');
+}); 
+Route::get('berita','FrontendController@berita');

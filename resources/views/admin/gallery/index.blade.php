@@ -28,6 +28,7 @@
                                 <th>Nama Barang</th>
                                 <th>Slug</th>
                                 <th>Kategori</th>
+                                <th>Tag</th>
                                 {{-- <th>Pembuat</th> --}}
                                 <th>Foto</th>
                                 <th style="text-align: center;">Aksi</th>
@@ -40,6 +41,11 @@
                                 <td>{{$data->slug}}</td>
                                 <td>{{$data->kategori->nama}}</td>
                                 {{-- <td>{{$data->user->name}}</td> --}}
+                                <td>
+                                @foreach ($data->tag as $key)
+                                    <li>{{ $key->nama }}</li>
+                                @endforeach
+                                </td>
                                 <td><img src="{{asset('assets/img/gallery/' .$data->foto. '')}}"
                                     style="width:250px; height:250px;" alt="Foto"></td>
 

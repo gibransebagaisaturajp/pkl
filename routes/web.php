@@ -11,22 +11,22 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
-
-Route::group(['prefix' => 'backend', 'middleware' => ['auth', 'role:Admin']], function () {
+Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
+    
+        Route::resource('gallery', 'GalleryController');
+        Route::resource('tag', 'TagController');
+        Route::resource('kategori', 'KategoriController');
+        Route::get('/home', 'HomeController@index')->name('home');
+});
+Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], function () {
     
        Route::resource('gallery', 'GalleryController'); 
        Route::resource('tag', 'TagController');
        Route::resource('kategori', 'KategoriController');
        Route::get('/home', 'HomeController@index')->name('home');
 });
- Route::resource('gallery', 'GalleryController');
- Route::resource('tag', 'TagController');
- Route::resource('kategori', 'KategoriController');
+
 
 
 Auth::routes(['register' => false]);
@@ -36,9 +36,7 @@ Route::get('/singleblog', function () {
     return view('frontend.singleblog');
 });
 
-Route::get('/index', function () {
-    return view('frontend.index');
-});
+Route::resource('/', 'FrontendController');
 
 Route::get('/contact', function () {
     return view('frontend.contact');
@@ -51,3 +49,5 @@ Route::get('/archive', function () {
 Route::get('/category', function () {
     return view('frontend.category');
 });
+Route::get('/blog/{id}', 'FrontendController@ShowDetail');
+Route::get('/blog-kategori/{kategori}', 'FrontController@blogkategori');

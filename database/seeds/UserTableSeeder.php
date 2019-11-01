@@ -13,7 +13,7 @@ class UserTableSeeder extends Seeder
     public function run()
     {
         $adminRole = new Role();
-        $adminRole->name = "Admin";
+        $adminRole->name = "admin";
         $adminRole->display_name = "admin";
         $adminRole->save();
 
@@ -29,7 +29,7 @@ class UserTableSeeder extends Seeder
         $admin->email = 'admin@gmail.com';
         $admin->password = bcrypt('admin123');
         $admin->save();
-        // $admin->attachRole($adminRole);
+        $admin->attachRole($adminRole);
         $member = new User();
         $member->name = 'Penjualan';
         $member->email = 'penjualan@gmail.com';
